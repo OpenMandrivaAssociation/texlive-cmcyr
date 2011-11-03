@@ -1,3 +1,9 @@
+# revision 16696
+# category Package
+# catalog-ctan /fonts/cyrillic/cmcyr
+# catalog-date 2007-09-16 18:06:50 +0200
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-cmcyr
 Version:	20070916
 Release:	1
@@ -785,6 +791,7 @@ encodings.
 %doc %{_texmfdistdir}/doc/fonts/cmcyr/wncisoe
 %doc %{_texmfdistdir}/doc/fonts/cmcyr/wnckoi8
 %doc %{_texmfdistdir}/doc/fonts/cmcyr/wnckoi8e
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -795,3 +802,5 @@ encodings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
