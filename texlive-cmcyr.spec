@@ -5,8 +5,8 @@ Summary:	Computer Modern fonts with cyrillic extensions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cyrillic/cmcyr
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.r60630.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.doc.r60630.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
