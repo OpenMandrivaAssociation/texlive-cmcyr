@@ -1,18 +1,12 @@
-# revision 16696
-# category Package
-# catalog-ctan /fonts/cyrillic/cmcyr
-# catalog-date 2007-09-16 18:06:50 +0200
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-cmcyr
-Version:	20190228
+Version:	60630
 Release:	1
 Summary:	Computer Modern fonts with cyrillic extensions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cyrillic/cmcyr
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.r60630.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.doc.r60630.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ available to recode them to three other Russian 8-bit
 encodings.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -785,25 +779,10 @@ encodings.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070916-2
-+ Revision: 750260
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070916-1
-+ Revision: 718077
-- texlive-cmcyr
-- texlive-cmcyr
-- texlive-cmcyr
-- texlive-cmcyr
-- texlive-cmcyr
-
