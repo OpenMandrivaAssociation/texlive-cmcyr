@@ -1,6 +1,6 @@
 Name:		texlive-cmcyr
-Version:	60630
-Release:	2
+Version:	68681
+Release:	1
 Summary:	Computer Modern fonts with cyrillic extensions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cyrillic/cmcyr
