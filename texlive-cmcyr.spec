@@ -3,7 +3,7 @@ Version:	68681
 Release:	1
 Summary:	Computer Modern fonts with cyrillic extensions
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/cyrillic/cmcyr
+URL:		https://www.ctan.org/tex-archive/fonts/cyrillic/cmcyr
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.doc.r%{version}.tar.xz
