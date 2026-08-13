@@ -12,7 +12,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.r%{tl_revi
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cmcyr.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 These are the Computer Modern fonts extended with Russian letters, in
@@ -20,3 +21,10 @@ Metafont sources and ATM Compatible Type 1 format. The fonts are
 provided in KOI-7, but virtual fonts are available to recode them to
 three other Russian 8-bit encodings.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from cmcyr:
+MixedMap cmcyr.map
+TL_DROPIN_EOF
